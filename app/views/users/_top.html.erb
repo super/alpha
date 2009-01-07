@@ -1,0 +1,112 @@
+ <!-- START HEADER -->
+ 
+
+ <% if  %>
+     <div id="orientation">
+	<div id="search_field">
+	  <strong>Search &nbsp;</strong> 
+	  <form action="/searches" method="get">  			<input class="input" id="term" name="term" style="width:115px;" type="text" value="" />
+  		  
+  			<select id="type" name="type"><option value="files">All Files</option>
+              <option value="flash">Flash</option>
+                  <option value="fonts">Fonts</option>
+
+                         <option value="users">Users</option>
+                                <option value="forums">Forums</option>
+                                           <option value="site">All Site</option>
+                                                       <option value="entire_network">Entire Network</option></select>
+  			<input class="input_button" type="submit" value="Go " />
+  	</form>  	
+  	
+  
+	</div>
+	<div id="page_title">
+    <div id="page_title_content">
+
+			<h1></h1>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var flashvars = {
+		 myText: "GGGGGG"
+		};
+		var params = {
+		  wmode: "transparent"
+		};
+		var attributes = { };
+
+		swfobject.embedSWF("/new/site_flashden.net/flash/page_title.swf?update=thx", "page_title_content", "460", "26", "9.0.0","expressInstall.swf", flashvars, params, attributes);
+  </script>
+	<div id="snail_trail">
+		<a href="/">Home</a>
+		
+		› <strong></strong> 
+	</div>
+
+  <div id="tabs">
+  <ul>
+          <li class="active"><a href="/user/gggggg">Profile</a></li>
+          <li><a href="/user/gggggg/downloads">Downloads</a></li>
+          <li><a href="/user/gggggg/bookmarks">Bookmarks</a></li>
+          <li><a href="/user/gggggg/earnings">Earnings</a></li>
+          <li><a href="/user/gggggg/statement">Statement</a></li>
+
+          <li><a href="/user/gggggg/edit">Edit</a></li>
+      </ul>
+</div>
+
+</div>
+
+    <!-- END ORIENTATION -->
+
+  
+  <% else %>
+     <!-- START ORIENTATION -->
+    
+<div id="orientation">
+	<div id="search_field">
+	  <strong>Search &nbsp;</strong> 
+	  <form action="/searches" method="get">  			<input class="input" id="term" name="term" style="width:115px;" type="text" value="" />
+  		  
+  			<select id="type" name="type"><option value="files">All Files</option>
+<option value="flash">Flash</option>
+<option value="fonts">Fonts</option>
+
+<option value="users">Users</option>
+<option value="forums">Forums</option>
+<option value="site">All Site</option>
+<option value="entire_network">Entire Network</option></select>
+  			<input class="input_button" type="submit" value="Go " />
+  	</form>  	
+  	
+  
+	</div>
+	<div id="page_title">
+    <div id="page_title_content">
+
+			<h1>SIGN UP</h1>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var flashvars = {
+		 myText: "SIGN UP"
+		};
+		var params = {
+		  wmode: "transparent"
+		};
+		var attributes = { };
+
+		swfobject.embedSWF("/new/site_flashden.net/flash/page_title.swf?update=thx", "page_title_content", "460", "26", "9.0.0","expressInstall.swf", flashvars, params, attributes);
+  </script>
+	<div id="snail_trail">
+		<a href="/">Home</a>
+		
+		› <strong>Sign Up</strong> 
+	</div>
+
+  
+</div>
+
+    <!-- END ORIENTATION -->
+<% end %>
+
