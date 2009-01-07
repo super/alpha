@@ -2232,7 +2232,7 @@ div#site_switcher h6 a {
 	background: url(../images/css/switcher.jpg) no-repeat right top;
 }
 
-div#site_switcher h6.flashden a { background: url(../images/cssswitcher.jpg) no-repeat left top;  }
+div#site_switcher h6.flashden a { background: url(../images/css/switcher.jpg) no-repeat left top;  }
 div#site_switcher h6.audiojungle a {	background: url(../images/css/switcher.jpg) no-repeat right top;  }
 div#site_switcher h6.graphicriver a {	background: url(../images/css/switcher.jpg) no-repeat right top;  }
 div#site_switcher h6.themeforest a {	background: url(../images/css/switcher.jpg) no-repeat right top;  }
@@ -2663,14 +2663,14 @@ ul#main_menu .selected {
 }
 /* IF there is a drop down here then we need an arrow */
 ul#main_menu .down {
-	background-image: url(/new/images/interface/arrow.gif);
+	background-image: url(../images/css/arrow.gif);
 }
 ul#main_menu .down:hover {
-	background-image: url(/new/images/interface/arrow_down.gif);
+	background-image: url(../images/css/arrow_down.gif);
 }
 /* When the drop down is open */
 ul#main_menu .down_open {
-	background-image: url(/new/images/interface/arrow_down.gif);
+	background-image: url(../images/css/arrow_down.gif);
 	background-color: #888377;
 	border-top: 1px solid #a29e91;
 	border-bottom: 1px solid #7d786c;
@@ -2678,7 +2678,7 @@ ul#main_menu .down_open {
 }
 /* When the drop down is selected */
 ul#main_menu .down_selected {
-	background-image: url(/new/images/interface/arrow_selected.gif);
+	background-image: url(../images/css/arrow_selected.gif);
 	background-color: #504c41;
 	border-bottom: 1px solid #5a5548;
 	color: #fea849;	
@@ -2742,11 +2742,11 @@ ul#main_menu ul li .submenu-down {
 	color:#7a766a;display:none;
 }
 #tabs li.active {
-	background-image:url(/new/site_graphicriver.net/interface/tab_on_right.jpg);
+	background-image:url(../images/css/tab_on_right.jpg);
 }
 #tabs li.active a, #tabs li.active a:hover {
 	background-color:transparent;
-	background-image:url(/new/site_graphicriver.net/interface/tab_on_left.jpg);
+	background-image:url(../images/css/tab_on_left.jpg);
 	color:#3b3b3b;
 }
 #tabs li {
@@ -2809,7 +2809,7 @@ ul#main_menu ul li .submenu-down {
 /**************/
 
 .input, textarea, select {
-	background-image:url(/new/images/interface/form_bg.jpg);
+	background-image:url(../images/css/form_bg.jpg);
 	border:1px solid #cecece;
 	color:#333333;
 }
@@ -2820,7 +2820,7 @@ ul#main_menu ul li .submenu-down {
 	min-height:100px;
 }
 form .header_login {
-	background-image:url(/new/images/interface/form_bg.jpg);
+	background-image:url(../images/css/form_bg.jpg);
 	border:1px solid #cecece;
 	color:#333333;
 }
@@ -2844,63 +2844,63 @@ form .header_login {
 	background-color: #db6600;
 	color: #ffffff;
 	border:1px solid #db6600;
-	background-image: url(/new/site_flashden.net/interface/button_bg.jpg);
+	background-image: url(../images/css/button_bg.jpg);
   text-decoration:none;
 }
 .input_button:hover {
 	background-color: #000000;	
 	border:1px solid #000000;
-	background-image: url(/new/site_flashden.net/interface/button_bg_over.jpg);
+	background-image: url(../images/css/button_bg_over.jpg);
 }
 .input_button_reverse {
 	background-color: #000000;
 	color: #ffffff;
 	border:1px solid #000000;
-	background-image: url(/new/site_flashden.net/interface/button_bg_over.jpg);	
+	background-image: url(../images/css/button_bg_over.jpg);	
 }
 .input_button_reverse:hover {
 	background-color: #db6600;	
 	border:1px solid #db6600;
-	background-image: url(/new/site_flashden.net/interface/button_bg.jpg);
+	background-image: url(../images/css/button_bg.jpg);
 }
 .input_button_small {
 	background-color: #db6600;
 	color: #ffffff;
 	border:1px solid #db6600;
-	background-image: url(/new/site_flashden.net/interface/button_bg.jpg);
+	background-image: url(../images/css/button_bg.jpg);
 }
 .input_button_small:hover {
 	background-color: #000000;	
 	border:1px solid #000000;
-	background-image: url(/new/site_flashden.net/interface/button_bg_over.jpg);
+	background-image: url(../images/css/button_bg_over.jpg);
 }
 
 .link_button{
-	background-image: url(/new/site_flashden.net/interface/button_bg.jpg);
+	background-image: url(../images/css/button_bg.jpg);
 	color: #ffffff;
 	border:1px solid #db6600;
 	background-color: #f38528;
 }
 .link_button:hover, .big_link:hover {
 	border:1px solid #000000;
-	background-image: url(/new/site_flashden.net/interface/button_bg_over.jpg);
+	background-image: url(../images/css/button_bg_over.jpg);
 	background-color: #000000;	
 }
 .big_link {
-	background-image: url(/new/site_flashden.net/interface/button_bg.jpg);
+	background-image: url(../images/css/button_bg.jpg);
 	color: #ffffff;
 	border:1px solid #db6600;
 	background-color: #f38528;
 }
 .link_button_small, .pagination a {
-	background-image: url(/new/site_flashden.net/interface/button_bg.jpg);
+	background-image: url(../images/css/button_bg.jpg);
 	color: #ffffff;
 	border:1px solid #db6600;
 	background-color: #f38528;	
 }
 .link_button_small:hover, .pagination a:hover {
 	border:1px solid #000000;
-	background-image: url(/new/site_flashden.net/interface/button_bg_over.jpg);
+	background-image: url(../images/css/button_bg_over.jpg);
 	background-color: #000000;	
 }
 
@@ -3168,15 +3168,15 @@ left:7px;
 	}
 	
 	#lightwindow_galleries_tab .up	{
-		background: url(../images/arrow-up.gif) no-repeat 60px 5px transparent;
+		background: url(../images/css/arrow-up.gif) no-repeat 60px 5px transparent;
 	}
 
 	#lightwindow_galleries_tab .down {
-		background: url(../images/arrow-down.gif) no-repeat 60px 6px transparent;
+		background: url(../images/css/arrow-down.gif) no-repeat 60px 6px transparent;
 	}
 
 	#lightwindow_galleries_list {
-		background: url(../images/black-70.png) repeat 0 0 transparent;
+		background: url(../images/css/black-70.png) repeat 0 0 transparent;
 		overflow: hidden;
 		height: 0px;
 	}
