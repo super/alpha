@@ -1,0 +1,80 @@
+<div class="logo_link"><a href="/"><img src="../images/image/logo_link_top.gif"></a></div>
+
+<div id="left_column">
+  <div id="menu">
+<div id="logo">
+  <ul>
+  
+
+
+<li style="position:relative; left:-5px;"><a href="/category/flash">Flash Files</a></li>
+
+<li style="position:relative; left:-5px;"><a href="/category/flash/site-templates">Flash Templates</a></li>
+
+<li style="position:relative; left:-5px;"><a href="/category/fonts">Pixel Fonts</a></li>
+<li style="position:relative; left:-5px;"><a href="http://videohive.net/">Stock Video</a></li>
+
+
+
+  </ul>
+  <img src="../images/image/logo_bottom.gif" alt="" />
+</div>
+<ul id="main_menu">
+  <li><a href="/">Home</a></li>           
+  <li><a href="#" class="down" onclick="expand_nav(this); return false;">Files</a>
+
+    <ul style="display: none;">
+      <li><a href="/category/index">Browse Categories</a></li>   
+      <li><a href="/feature">Featured Files</a></li>
+      <li><a href="/page/top_sellers">Popular Files</a></li>
+      
+        <li><a href="/author/top_sellers">Top Authors</a></li>
+      
+    </ul>
+  </li>   
+  <li><a href="#" class="down" onclick="expand_nav(this); return false;">Make Money</a>
+
+    <ul style="display: none;">
+                <li><a href="/page/author_program">Author Program</a></li>       
+      <li><a href="/page/referrals">Referral Program</a></li>             
+      <li><a href="/page/rates">Payment Rates</a></li>
+      <li><a href="/page/copyright">Copyright Policy</a></li>
+              </ul>
+  </li>
+  <li><%= link_to 'Forums'%></li>
+
+  
+    <li><a href="http://blog.flashden.net">Blog</a></li>
+  
+  <li><a href="#" class="down" onclick="expand_nav(this); return false;">About</a>
+    <ul style="display: none;">
+      <li><a href="/page/about">About Us</a></li>
+      <li><a href="/page/icons">Badges</a></li>         
+    </ul>
+  </li>
+
+  <li><a href="#" class="down" onclick="expand_nav(this); return false;">Support</a>
+    <ul style="display: none;">
+
+    
+      <li><a href="/faq/general">FAQs</a></li>
+    
+    <li><a href="/support">Contact Support</a></li>         
+    <li><a href="/legal/website">Legal Information</a></li>  
+    </ul>
+  </li>
+
+  
+</ul>
+  </div>
+  <div id="advertising">
+  
+<a href="/page/referrals"><img src="../images/image/banner_referral.gif"></a><br />
+	
+	<a href="http://videohive.net"><img src="../images/image/VH_120x90.jpg" style="position:relative; left:6px;"></a>
+
+  
+</div>
+
+</div>
+
