@@ -5,44 +5,24 @@
     <title>Flash Components - FlashDen</title>
     <%= stylesheet_link_tag 'style' %>
     <link rel="shortcut icon" href="/new/site_flashden.net/interface/favicon.ico" />
-    <%= javascript_include_tag :all %>  
+    <%= javascript_include_tag :all %>
     <link href="/feeds/new-flash-items.atom" rel="alternate" type="application/atom+xml" title="FlashDen new Flash items feed" /><link href="/feeds/new-fonts-items.atom" rel="alternate" type="application/atom+xml" title="FlashDen new Fonts items feed" />
-
   </head>
   <body id='doc_body'>
-
     <a name="top"></a>
     <div id="container">
-
       <!-- START HEADER -->
       <%= render :partial => 'shared/header' %>
-
       <!-- END HEADER -->
-
       <!-- START LEFT MENU COLUMN -->
       <%= render :partial => 'shared/leftmenu' %>
-
       <!-- END LEFT MENU COLUMN -->
-
-
-      <!-- START ORIENTATION -->
-
-      <!-- END ORIENTATION -->
-
       <!-- START BODY -->
       <%= yield %>
       <!-- END BODY -->
-
       <!-- START FOOTER -->
       <%= render :partial => 'shared/footer' %>
       <!-- END FOOTER -->
-
-      <!-- JAVASCRIPT FOR SWFOBJECT AND GOOGLE ANALYTICS (analyitcs.js)-->
-      <!-- END JAVASCRIPT -->
     </div>
-
-
   </body>
 </html>
-
-

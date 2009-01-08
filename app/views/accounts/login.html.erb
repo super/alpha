@@ -5,7 +5,12 @@
     <div class="content">
       <% if flash[:error] %>
         <div class="error">
-          <%= flash[:error] %> 
+          <%= flash[:error] %>
+        </div>
+      <% end %>
+      <% if flash[:notice] %>
+        <div class="alert">
+          <%= flash[:notice] %>
         </div>
       <% end %>
       <fieldset>
@@ -39,9 +44,6 @@
       </div>
     </div>
     <div style="clear:both;"></div>
-    <!--[if IE 6]>
-    <![endif]-->
   </div>
 </div>
 <!-- END BODY -->
-

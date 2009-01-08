@@ -1,27 +1,22 @@
 <% if is_logged_in? %>
   <div id="orientation">
     <div id="search_field">
-      <strong>Search &nbsp;</strong> 
-      <form action="/searches" method="get">  
+      <strong>Search &nbsp;</strong>
+      <form action="/searches" method="get">
         <input class="input" id="term" name="term" style="width: 115px;" value="" type="text">
-
         <select id="type" name="type"><option value="files">All Files</option>
           <option value="flash">Flash</option>
           <option value="fonts">Fonts</option>
           <option value="users">Users</option>
-
           <option value="forums">Forums</option>
           <option value="site">All Site</option>
           <option value="entire_network">Entire Network</option></select>
         <input class="input_button" value="Go " type="submit">
-      </form>  	
-
-
+      </form>
     </div>
     <div id="page_title">
       <div id="page_title_content">
         <h1><%= logged_in_user.username %></h1>
-
       </div>
     </div>
     <script type="text/javascript">
@@ -32,15 +27,12 @@ var params = {
 wmode: "transparent"
 };
 var attributes = { };
-
 swfobject.embedSWF("/new/site_flashden.net/flash/page_title.swf?update=thx", "page_title_content", "460", "26", "9.0.0","expressInstall.swf", flashvars, params, attributes);
 </script>
 <div id="snail_trail">
   <a href="/">Home</a>
-
-  › <strong><%= logged_in_user.username %></strong> 
+  › <strong><%= logged_in_user.username %></strong>
 </div>
-
 <div id="tabs">
   <ul>
     <li class="active"><a href="/user/sakula">Profile</a></li>
@@ -48,48 +40,35 @@ swfobject.embedSWF("/new/site_flashden.net/flash/page_title.swf?update=thx", "pa
     <li><a href="/user/sakula/bookmarks">Bookmarks</a></li>
     <li><a href="/user/sakula/earnings">Earnings</a></li>
     <li><a href="/user/sakula/statement">Statement</a></li>
-
     <li><a href="/user/sakula/edit">Edit</a></li>
   </ul>
 </div>
-
 </div>
 <% else %>
   <div id="orientation">
     <div id="search_field">
-      <strong>Search &nbsp;</strong> 
-      <form action="/searches" method="get">  	
+      <strong>Search &nbsp;</strong>
+      <form action="/searches" method="get">
         <input class="input" id="term" name="term" style="width:115px;" type="text" value="" />
         <select id="type" name="type"><option value="files">All Files</option>
           <option value="flash">Flash</option>
           <option value="fonts">Fonts</option>
-
           <option value="users">Users</option>
           <option value="forums">Forums</option>
           <option value="site">All Site</option>
           <option value="entire_network">Entire Network</option></select>
         <input class="input_button" type="submit" value="Go " />
-      </form>  	
+      </form>
     </div>
     <div id="page_title">
       <div id="page_title_content">
-
         <h1>SIGN UP</h1>
       </div>
     </div>
-    <script type="text/javascript">
-      var flashvars = {
-myText: "SIGN UP"
-      };
-var params = {
-wmode: "transparent"
-};
-var attributes = { };
-swfobject.embedSWF("/new/site_flashden.net/flash/page_title.swf?update=thx", "page_title_content", "460", "26", "9.0.0","expressInstall.swf", flashvars, params, attributes);
-</script>
-<div id="snail_trail">
-  <a href="/">Home</a>
-  › <strong>Sign Up</strong> 
-</div>
-</div>
+    <script type="text/javascript"> var flashvars = { myText: "SIGN UP" }; var params = { wmode: "transparent" }; var attributes = { }; swfobject.embedSWF("/new/site_flashden.net/flash/page_title.swf?update=thx", "page_title_content", "460", "26", "9.0.0","expressInstall.swf", flashvars, params, attributes); </script>
+    <div id="snail_trail">
+      <a href="/">Home</a>
+      › <strong>Sign Up</strong>
+    </div>
+  </div>
 <% end %>
