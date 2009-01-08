@@ -1,50 +1,30 @@
-
 <!-- START ORIENTATION -->
-
 <div id="orientation">
   <div id="search_field">
     <strong>Search &nbsp;</strong> 
     <form action="/searches" method="get">
       <input class="input" id="term" name="term" style="width:115px;" type="text" value="" />
-
       <select id="type" name="type"><option value="files">All Files</option>
         <option value="flash">Flash</option>
         <option value="fonts">Fonts</option>
-
         <option value="users">Users</option>
         <option value="forums">Forums</option>
         <option value="site">All Site</option>
         <option value="entire_network">Entire Network</option></select>
       <input class="input_button" type="submit" value="Go " />
     </form>	
-
-
   </div>
   <div id="page_title">
     <div id="page_title_content">
-
       <h1>LOG IN</h1>
     </div>
   </div>
-  <script type="text/javascript">
-    var flashvars = {
-myText: "LOG IN"
-    };
-var params = {
-wmode: "transparent"
-};
-var attributes = { };
-
-swfobject.embedSWF("/new/site_flashden.net/flash/page_title.swf?update=thx", "page_title_content", "460", "26", "9.0.0","expressInstall.swf", flashvars, params, attributes);
-</script>
-<div id="snail_trail">
+  <!-- START JavaScript (attributes) -->
+  <%= javascript_include_tag :all %>
+  <!-- End JavaScript -->
+  <div id="snail_trail">
   <a href="/">Home</a>
-
   › <strong>Log In</strong>
 </div>
-
-
 </div>
-
 <!-- END ORIENTATION -->
-
