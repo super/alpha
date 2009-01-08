@@ -1,0 +1,47 @@
+<!-- START BODY -->
+<%= render :partial => 'top' %>
+<div id="body">
+  <div id="wrap">
+    <div class="content">
+      <% if flash[:error] %>
+        <div class="error">
+          <%= flash[:error] %> 
+        </div>
+      <% end %>
+      <fieldset>
+        <legend>Log In</legend>
+        <% form_tag login_path do %> 
+          <label>Username</label>
+          <%= text_field_tag :username,nil, :class => 'input' %>
+          <label>Password</label>
+          <%= password_field_tag :password,nil, :class => 'input' %>
+          <%= submit_tag "Log In" , :class => 'input_button' %>
+          <p style="float:left; margin-left:72px; margin-top:-22px; font-size:10px;"><a href="/reset_password">Forgot Your Password?</a></p>
+          <p style="float:left; margin-left:10px; margin-top:-22px; font-size:10px;"><a href="/lost_usernames">Forgot Your Username?</a></p>
+        <% end %>
+      </fieldset>
+    </div>
+    <div id="sidebar">
+      <h3>Don't have an account?</h3>
+      <div class="content">
+        <p>Registering for an account is free and gives you access to:</p>
+        <ul>
+          <li>Deposit Cash and Download Items</li>
+          <li>Use the forums</li>
+          <li>Have your own profile page</li>
+          <li>Enter Competitions</li>
+          <li>Join in the Community</li>
+        </ul>
+        <p>What are you waiting for? </p>
+        <div align="center">
+          <a href="/signup" class="link_button">Sign Up Now</a>
+        </div>
+      </div>
+    </div>
+    <div style="clear:both;"></div>
+    <!--[if IE 6]>
+    <![endif]-->
+  </div>
+</div>
+<!-- END BODY -->
+

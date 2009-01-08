@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
     self.hashed_password = User.encrypted_password(self.password, self.salt)
   end
 
-private
+  private
   def create_new_salt
     self.salt = self.object_id.to_s + rand.to_s
   end
@@ -26,7 +26,14 @@ private
     Digest::SHA1.hexdigest(string_to_hash)
   end
 
-#  def self.authenticate(username,password)
-#  end
-
+  def self.authenticate(username,password)
+    user = self.find_by_username(username)
+    if user
+      correct_password = User.encrypted_password(password,user.salt)
+      if user.hashed_password !=correct_password
+        user= nil
+      end
+    end
+    user
+  end
 end

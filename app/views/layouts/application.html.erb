@@ -1,126 +1,126 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>Flash Components - FlashDen</title>
- <%= stylesheet_link_tag 'style' %>
-  <!--[if IE 6]>
-<style type="text/css">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Flash Components - FlashDen</title>
+    <%= stylesheet_link_tag 'style' %>
+    <!--[if IE 6]>
+    <style type="text/css">
 
-	body {
-	  	background-color:#f3f3f3;		
-	}
-	li.category-root {
-		float: none;
-	}
+      body {
+      background-color:#f3f3f3;		
+      }
+      li.category-root {
+      float: none;
+      }
 
-	#left_column {
-	  position: absolute;
-	  top: 0;
-	  left: 6px;
-	  z-index: 10;
-	}
+      #left_column {
+      position: absolute;
+      top: 0;
+      left: 6px;
+      z-index: 10;
+      }
 
-	#body {
-	  position: absolute;
-	  top: 135px;
-	  left: 125px;
-	  z-index: 9;
-	}
+      #body {
+      position: absolute;
+      top: 135px;
+      left: 125px;
+      z-index: 9;
+      }
 
-	#body.with-tabs {
-	  top: 160px;
-	}
+      #body.with-tabs {
+      top: 160px;
+      }
 
-	#footer_recent, #footer_eden {
-	  display: none;
-	}
+      #footer_recent, #footer_eden {
+      display: none;
+      }
 
-	#home_content_area {
-	  margin-top:23px;
-	}
-	legend {
-	  margin-bottom:20px;
-	}
-	
-	
-  .result_details {
-  	width: 400px;
-  }
+      #home_content_area {
+      margin-top:23px;
+      }
+      legend {
+      margin-bottom:20px;
+      }
 
-  .result_title {
-  	width: 400px;
-  }
 
-  fieldset .result_details {
-  	width: 355px;
-  }
+      .result_details {
+      width: 400px;
+      }
 
-  fieldset .result_title {
-  	width: 355px;
-  }
-  
-</style>
-<![endif]-->
+      .result_title {
+      width: 400px;
+      }
 
-  <!--[if IE 7]>
+      fieldset .result_details {
+      width: 355px;
+      }
+
+      fieldset .result_title {
+      width: 355px;
+      }
+
+    </style>
+    <![endif]-->
+
+    <!--[if IE 7]>
     <style type="text/css">
       @import "/new/stylesheets/ie7_hacks.css?20081231001201"; 
     </style>
-  <![endif]-->
-  <link rel="shortcut icon" href="/new/site_flashden.net/interface/favicon.ico" />
+    <![endif]-->
+    <link rel="shortcut icon" href="/new/site_flashden.net/interface/favicon.ico" />
 
-  <%= javascript_include_tag :all %>  
-  <link href="/feeds/new-flash-items.atom" rel="alternate" type="application/atom+xml" title="FlashDen new Flash items feed" /><link href="/feeds/new-fonts-items.atom" rel="alternate" type="application/atom+xml" title="FlashDen new Fonts items feed" />
-	
-  
-</head>
-<body id='doc_body'>
-
-  <a name="top"></a>
-<div id="container">
-  
-  <!-- START HEADER -->
-    <%= render :partial => 'shared/header' %>
-
-  <!-- END HEADER -->
-
-  <!-- START LEFT MENU COLUMN -->
-    <%= render :partial => 'shared/leftmenu' %>
-  <!-- END LEFT MENU COLUMN -->
-
-  
-  <!-- START ORIENTATION -->
-
-  <!-- END ORIENTATION -->
-
-  <!-- START BODY -->
-<%= yield %>
-   <!-- END BODY -->
-  
-  <!-- START FOOTER -->
-    <%= render :partial => 'shared/footer' %>
-  <!-- END FOOTER -->
-  
-  <!-- JAVASCRIPT FOR SWFOBJECT AND GOOGLE ANALYTICS -->
-
-    
-<script type="text/javascript">
-var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-</script>
-<script type="text/javascript">
-var pageTracker = _gat._getTracker("UA-249823-1");
-pageTracker._initData();
-pageTracker._trackPageview();
-</script>
+    <%= javascript_include_tag :all %>  
+    <link href="/feeds/new-flash-items.atom" rel="alternate" type="application/atom+xml" title="FlashDen new Flash items feed" /><link href="/feeds/new-fonts-items.atom" rel="alternate" type="application/atom+xml" title="FlashDen new Fonts items feed" />
 
 
-  <!-- END JAVASCRIPT -->
-</div>
+  </head>
+  <body id='doc_body'>
+
+    <a name="top"></a>
+    <div id="container">
+
+      <!-- START HEADER -->
+      <%= render :partial => 'shared/header' %>
+
+      <!-- END HEADER -->
+
+      <!-- START LEFT MENU COLUMN -->
+      <%= render :partial => 'shared/leftmenu' %>
+      <!-- END LEFT MENU COLUMN -->
 
 
-</body>
+      <!-- START ORIENTATION -->
+
+      <!-- END ORIENTATION -->
+
+      <!-- START BODY -->
+      <%= yield %>
+      <!-- END BODY -->
+
+      <!-- START FOOTER -->
+      <%= render :partial => 'shared/footer' %>
+      <!-- END FOOTER -->
+
+      <!-- JAVASCRIPT FOR SWFOBJECT AND GOOGLE ANALYTICS -->
+
+
+      <script type="text/javascript">
+        var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+        document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+      </script>
+      <script type="text/javascript">
+        var pageTracker = _gat._getTracker("UA-249823-1");
+        pageTracker._initData();
+        pageTracker._trackPageview();
+      </script>
+
+
+      <!-- END JAVASCRIPT -->
+    </div>
+
+
+  </body>
 </html>
 
 

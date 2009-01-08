@@ -1,78 +1,78 @@
 <!-- START BODY -->
 <%= render :partial => 'top'%>
-    <div id="body">
-      <div id="wrap">
-        <div class="content">
-        <%= error_messages_for :user, :class => 'error', :header_message => nil %>
-<% form_for @user, users_path do |f|%>
-    <fieldset>
+<div id="body">
+  <div id="wrap">
+    <div class="content">
+      <%= error_messages_for :user, :class => 'error', :header_message => nil %>
+      <% form_for @user, users_path do |f|%>
+        <fieldset>
 
-  <legend>详细资料</legend>
+          <legend>详细资料</legend>
 
-<label>用户名<span class="required">*</span></label>
-<%= f.text_field :username, :class => 'input'%>
-<small>This is who you will be known as on the Envato Marketplaces</small>
-
-
-<label>密码<span class="required">*</span></label>
-<%= f.password_field :password, :class => 'input'%>
-
-<label>确认密码<span class="required">*</span></label>
-<%= f.password_field :password_confirmation, :class => 'input'%>
-
-<label>邮箱<span class="required">*</span></label>
-<%= f.text_field :email, :class => 'input' %>
-<small>We keep your email safe and never give it to anybody! Promise!</small>
+          <label>用户名<span class="required">*</span></label>
+          <%= f.text_field :username, :class => 'input'%>
+          <small>这是你在这个网站的姓名</small>
 
 
-<label>确认邮箱<span class="required">*</span></label>
-<%= f.text_field :email_confirmation, :class => 'input' %>
+          <label>密码<span class="required">*</span></label>
+          <%= f.password_field :password, :class => 'input'%>
 
-    
-</fieldset>
+          <label>确认密码<span class="required">*</span></label>
+          <%= f.password_field :password_confirmation, :class => 'input'%>
 
-    <fieldset>
-  <legend>条约</legend>
-        
-</fieldset>
-
-    <%= submit_tag '注册', :class => 'input_button' %>
-  
-<% end %>
+          <label>邮箱<span class="required">*</span></label>
+          <%= f.text_field :email, :class => 'input' %>
+          <small>我们将保证您的电子邮件的安全并不会透露给任何人！</small>
 
 
-</div>
-
-<div id="sidebar">
-  <h3>Thinking about signing up?</h3>
-  <div class="content">
-    
-  <p>Registering for an account is free and gives you access to:</p>
-  <ul class="regular">
-    <li>Deposit Cash (and Download Items) </li>
-    <li>Use the forums </li>
-
-    <li>Have your own profile page </li>
-    <li>Enter Competitions </li>
-    <li>Join in the Community </li>
-    <li>Access to ALL Envato Marketplaces with one account</li>
-  </ul>
-  <p>Best of all, it's easy!</p>
-
-  <div align='center'><a href="/legal/privacy" class="link_button">View Privacy Agreement</a></div>
-
-  </div>
-</div>
+          <label>确认邮箱<span class="required">*</span></label>
+          <%= f.text_field :email_confirmation, :class => 'input' %>
 
 
+        </fieldset>
 
-        <div style="clear:both;"></div>
-        <!--[if IE 6]>
+        <fieldset>
+          <legend>条约如下</legend>
 
-<![endif]-->
+        </fieldset>
 
-      </div>  	
-    </div>  	
-    <!-- END BODY -->
+        <%= submit_tag '注册', :class => 'input_button' %>
+
+      <% end %>
+
+
+    </div>
+
+    <div id="sidebar">
+      <h3>Thinking about signing up?</h3>
+      <div class="content">
+
+        <p>Registering for an account is free and gives you access to:</p>
+        <ul class="regular">
+          <li>Deposit Cash (and Download Items) </li>
+          <li>Use the forums </li>
+
+          <li>Have your own profile page </li>
+          <li>Enter Competitions </li>
+          <li>Join in the Community </li>
+          <li>Access to ALL Envato Marketplaces with one account</li>
+        </ul>
+        <p>Best of all, it's easy!</p>
+
+        <div align='center'><a href="/legal/privacy" class="link_button">View Privacy Agreement</a></div>
+
+      </div>
+    </div>
+
+
+
+    <div style="clear:both;"></div>
+    <!--[if IE 6]>
+
+    <![endif]-->
+
+  </div>  	
+</div>  	
+<!-- END BODY -->
 
 

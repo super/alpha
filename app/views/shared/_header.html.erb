@@ -1,120 +1,130 @@
 <div id="header">
-  
-<div id="top_menu">
 
-<ul>
+  <div id="top_menu">
+    <% if is_logged_in?%>
+
+      <strong><a href="/user/111111" class="orange">welcome   <%=logged_in_user.username%></a></strong>
+      ( <a href="/deposit" class="white">US$0.00</a></strong> )
+  </ul>
+  <ul>
+    <%= link_to 'Account', home_path %>
+    <%= link_to 'Bookmarks', home_path %>
+    <%= link_to 'Author Program', home_path %>
+    <%= link_to 'Deposit', home_path %>
+    <%= link_to 'LogOut',logout_path %>
+
+  </ul>
+<% else %>
+  <ul>
     <li>
-     <% form_tag  do %>
-     用户名 <%= text_field_tag :username,nil, :class => 'input', :size => '13'%>&nbsp;&nbsp;
-     密码 <%= password_field_tag :password,nil, :class =>'input', :size => '13'%>
-     <%= submit_tag '登录', :class => 'input_button_small'%>
-     <% end %>  
+    <% form_tag login_path do %>
+      用户名 <%= text_field_tag :username,nil, :class => 'input', :size => '13'%>&nbsp;&nbsp;
+      密码 <%= password_field_tag :password,nil, :class =>'input', :size => '13'%>
+      <%= submit_tag '登录', :class => 'input_button_small'%>
+    <% end %>
     </li>
     <li><%= link_to '注册', signup_path %></li>
-</ul>
-
+  </ul>
+<% end %>
   </div>
-
-  
-  
   <div id="site_switcher">
-<h6 id="switcher-trigger" class="flashden"><a href="javascript:Effect.Combo('links-wrap', {duration: .1, scaleX: false, scaleContent: false});">Envato Network</a></h6>
-<div id="links-wrap" style="display:none;">
-<div id="links">
-  <div id="first">
-    <table>
-      
-      <tr>
-        <td class="my_alt"><a href="http://flashden.net/" title="Flash Components - FlashDen">FlashDen</a></td>
+    <h6 id="switcher-trigger" class="flashden"><a href="javascript:Effect.Combo('links-wrap', {duration: .1, scaleX: false, scaleContent: false});">Envato Network</a></h6>
+    <div id="links-wrap" style="display:none;">
+      <div id="links">
+        <div id="first">
+          <table>
 
-        <td><a href="http://flashden.net/" title="Flash Components - FlashDen">Flash Components</a></td>
-      </tr>
-      
-      <tr>
-        <td class="my_alt"><a href="http://audiojungle.net/" title="Music Loops &amp; Sound Effects - AudioJungle">AudioJungle</a></td>
-        <td><a href="http://audiojungle.net/" title="Music Loops &amp; Sound Effects - AudioJungle">Music Loops &amp; Sound Effects</a></td>
-      </tr>
+            <tr>
+              <td class="my_alt"><a href="http://flashden.net/" title="Flash Components - FlashDen">FlashDen</a></td>
 
-      
-      <tr>
-        <td class="my_alt"><a href="http://themeforest.net/" title="Site Templates &amp; Themes - ThemeForest">ThemeForest</a></td>
-        <td><a href="http://themeforest.net/" title="Site Templates &amp; Themes - ThemeForest">Site Templates &amp; Themes</a></td>
-      </tr>
-      
-      <tr>
-        <td class="my_alt"><a href="http://videohive.net/" title="Royalty Free Footage, Motion Graphics and After Effects - VideoHive">VideoHive</a></td>
+              <td><a href="http://flashden.net/" title="Flash Components - FlashDen">Flash Components</a></td>
+            </tr>
 
-        <td><a href="http://videohive.net/" title="Royalty Free Footage, Motion Graphics and After Effects - VideoHive">Royalty Free Footage, Motion Graphics and After Effects</a></td>
-      </tr>
-      
-    </table>
-  </div>
-  <div id="second">
-    <table>
-      <tr>
-        <td class="my_alt"><a href="http://www.psdtuts.com" title="Photoshop Tutorials - PSDTUTS">PSDTUTS</a></td>
+            <tr>
+              <td class="my_alt"><a href="http://audiojungle.net/" title="Music Loops &amp; Sound Effects - AudioJungle">AudioJungle</a></td>
+              <td><a href="http://audiojungle.net/" title="Music Loops &amp; Sound Effects - AudioJungle">Music Loops &amp; Sound Effects</a></td>
+            </tr>
 
-        <td><a href="http://www.psdtuts.com" title="Photoshop Tutorials - PSDTUTS">Photoshop Tutorials</a></td>
-      </tr>
-      <tr>
-        <td class="my_alt"><a href="http://www.vectortuts.com" title="Illustrator &amp; Vector Tutorials - VECTORTUTS">VECTORTUTS</a></td>
-        <td><a href="http://www.vectortuts.com" title="Illustrator &amp; Vector Tutorials - VECTORTUTS">Illustrator Tutorials</a></td>
-      </tr>       
-      <tr>
-        <td class="my_alt"><a href="http://www.audiotuts.com" title="Music &amp; Sound Tutorials - AUDIOTUTS">AUDIOTUTS</a></td>
 
-        <td><a href="http://www.audiotuts.com" title="Music &amp; Sound Tutorials - AUDIOTUTS">Music &amp; Sound Tutorials</a></td>
-      </tr> 
-      <tr>
-        <td class="my_alt"><a href="http://www.nettuts.com" title="Web Development &amp; Design Tutorials - NETTUTS">NETTUTS</a></td>
-        <td><a href="http://www.nettuts.com" title="Web Development &amp; Design Tutorials - NETTUTS">Web Development Tutorials</a></td>
-      </tr>
-      <tr>
+            <tr>
+              <td class="my_alt"><a href="http://themeforest.net/" title="Site Templates &amp; Themes - ThemeForest">ThemeForest</a></td>
+              <td><a href="http://themeforest.net/" title="Site Templates &amp; Themes - ThemeForest">Site Templates &amp; Themes</a></td>
+            </tr>
 
-        <td class="my_alt"><a href="http://www.aetuts.com" title="After Effects Tutorials - AETUTS">AETUTS</a></td>
-        <td><a href="http://www.nettuts.com" title="After Effects Tutorials - AETUTS">After Effects Tutorials</a></td>
-      </tr>
-      </tbody>
-    </table>
-  </div>
-  <div id="third">
-    <table>
+            <tr>
+              <td class="my_alt"><a href="http://videohive.net/" title="Royalty Free Footage, Motion Graphics and After Effects - VideoHive">VideoHive</a></td>
 
-      <tbody>
-      <tr>
-        <td class="my_alt"><a href="http://www.freelanceswitch.com" title="Freelance Advice - FreelanceSwitch">FreelanceSwitch</a></td>
-        <td><a href="http://www.freelanceswitch.com" title="Freelance Advice - FreelanceSwitch">Freelance Advice</a></td>
-      </tr>
-      
-      <tr>
-          <td class="my_alt"><a href="http://daily.creattica.com" title="Creative News - Creattica Daily">Creattica Daily</a></td>
+              <td><a href="http://videohive.net/" title="Royalty Free Footage, Motion Graphics and After Effects - VideoHive">Royalty Free Footage, Motion Graphics and After Effects</a></td>
+            </tr>
 
-          <td><a href="http://daily.creattica.com" title="Creative News - Creattica Daily">Creative News</a></td>
+          </table>
+        </div>
+        <div id="second">
+          <table>
+            <tr>
+              <td class="my_alt"><a href="http://www.psdtuts.com" title="Photoshop Tutorials - PSDTUTS">PSDTUTS</a></td>
 
-      </tr>
-      
-      
-      <tr>
-        <td class="my_alt"><a href="http://jobs.freelanceswitch.com" title="Freelance Jobs">Jobs.FSW</a></td>
-        <td><a href="http://jobs.freelanceswitch.com" title="Freelance Jobs">Freelance Jobs</a></td>
-      </tr>   
-      <tr>
+              <td><a href="http://www.psdtuts.com" title="Photoshop Tutorials - PSDTUTS">Photoshop Tutorials</a></td>
+            </tr>
+            <tr>
+              <td class="my_alt"><a href="http://www.vectortuts.com" title="Illustrator &amp; Vector Tutorials - VECTORTUTS">VECTORTUTS</a></td>
+              <td><a href="http://www.vectortuts.com" title="Illustrator &amp; Vector Tutorials - VECTORTUTS">Illustrator Tutorials</a></td>
+            </tr>
+            <tr>
+              <td class="my_alt"><a href="http://www.audiotuts.com" title="Music &amp; Sound Tutorials - AUDIOTUTS">AUDIOTUTS</a></td>
 
-        <td class="my_alt"><a href="http://www.faveup.com" title="Design Inspiration Gallery - FAVEUP">FaveUp</a></td>
-        <td><a href="http://www.faveup.com" title="Design Inspiration Gallery - FAVEUP">Design Inspiration</a></td>
-      </tr>
-      <tr>
-        <td class="my_alt"><a href="http://www.envato.com" title="Envato">Envato</a></td>
-        <td><a href="http://www.envato.com" title="Envato">About Us</a></td>
-      </tr>
+              <td><a href="http://www.audiotuts.com" title="Music &amp; Sound Tutorials - AUDIOTUTS">Music &amp; Sound Tutorials</a></td>
+            </tr>
+            <tr>
+              <td class="my_alt"><a href="http://www.nettuts.com" title="Web Development &amp; Design Tutorials - NETTUTS">NETTUTS</a></td>
+              <td><a href="http://www.nettuts.com" title="Web Development &amp; Design Tutorials - NETTUTS">Web Development Tutorials</a></td>
+            </tr>
+            <tr>
 
-    
-      </tbody>      
-    </table>
-  </div>
-</div><!-- #lists -->
-</div><!-- #slidedown_demo -->
-  </div><!-- #switcher -->
+              <td class="my_alt"><a href="http://www.aetuts.com" title="After Effects Tutorials - AETUTS">AETUTS</a></td>
+              <td><a href="http://www.nettuts.com" title="After Effects Tutorials - AETUTS">After Effects Tutorials</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div id="third">
+        <table>
+
+          <tbody>
+            <tr>
+              <td class="my_alt"><a href="http://www.freelanceswitch.com" title="Freelance Advice - FreelanceSwitch">FreelanceSwitch</a></td>
+              <td><a href="http://www.freelanceswitch.com" title="Freelance Advice - FreelanceSwitch">Freelance Advice</a></td>
+            </tr>
+
+            <tr>
+              <td class="my_alt"><a href="http://daily.creattica.com" title="Creative News - Creattica Daily">Creattica Daily</a></td>
+
+              <td><a href="http://daily.creattica.com" title="Creative News - Creattica Daily">Creative News</a></td>
+
+            </tr>
+
+
+            <tr>
+              <td class="my_alt"><a href="http://jobs.freelanceswitch.com" title="Freelance Jobs">Jobs.FSW</a></td>
+              <td><a href="http://jobs.freelanceswitch.com" title="Freelance Jobs">Freelance Jobs</a></td>
+            </tr>
+            <tr>
+
+              <td class="my_alt"><a href="http://www.faveup.com" title="Design Inspiration Gallery - FAVEUP">FaveUp</a></td>
+              <td><a href="http://www.faveup.com" title="Design Inspiration Gallery - FAVEUP">Design Inspiration</a></td>
+            </tr>
+            <tr>
+              <td class="my_alt"><a href="http://www.envato.com" title="Envato">Envato</a></td>
+              <td><a href="http://www.envato.com" title="Envato">About Us</a></td>
+            </tr>
+
+
+          </tbody>      
+        </table>
+      </div>
+    </div><!-- #lists -->
+  </div><!-- #slidedown_demo -->
+</div><!-- #switcher -->
 
 </div>
 
