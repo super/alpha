@@ -1,0 +1,108 @@
+<!-- START BODY -->
+<%= render :partial => 'top'%>
+<div id="tabs">
+  <ul>
+    <li><%= link_to 'Profile' %></li>
+    <li><%= link_to 'Downloads' %></li>
+    <li><%= link_to 'Bookmarks' %></li>
+    <li><%= link_to 'Earnings' %></li>
+    <li><%= link_to 'Statement'%></li>
+    <li class="active"><%= link_to 'Edit', edit_user_path(logged_in_user) %></li>
+  </ul>
+</div>
+<div id="body" class="with-tabs">
+      <div id="wrap">
+        <div class="content">
+  <script type="text/javascript">
+function expand_section(label)
+{
+  var accordion = document.getElementById('accordion')
+  var divs = accordion.getElementsByTagName('div')
+  for (var i=0; i<divs.length; i++) {
+    if (divs[i].className == 'container open')
+    {
+      divs[i].className = 'container closed'
+    }
+  }
+  for (var i=0; i<divs.length; i++) {
+    if (divs[i] == label)
+    {
+      divs[i+1].className = 'container open'
+      return true
+    }
+  }
+}
+</script>
+<div id="accordion">
+<div class="label" onclick="expand_section(this);">
+  Change your Password
+</div>
+<div class="container closed">
+<form action="/user/jshmemory/change_password" method="POST">
+<label>Current Password <span class="required">*</span></label>
+<input type="password" name="password" value="" class="input" />
+<label>New Password <span class="required">*</span></label>
+<input type="password" name="new_password" value="" class="input" />
+<label>Re-Type New Password <span class="required">*</span></label>
+<input type="password" name="new_password_confirmed" value="" class="input" />
+<input type="submit" class="input_button" value="Save" />
+</form>
+</div>
+<div class="label" onclick="expand_section(this);">
+  Avatar & Homepage Images
+</div>
+<div class="container closed">
+<form action="/user/jshmemory/change_profile_and_homepage_images" method="POST" enctype="multipart/form-data">
+          <label>Current Avatar</label>
+          <img alt="66946" src="/files/66946.png?1230609145" />
+<label>Replace Avatar</label>
+<input type="file" name="profile_image" value="" class="input" />
+<small>JPEG 80x80px</small>
+          <label>Current Homepage Image</label>
+          <a href="/files/66945.jpg" target="_blank">Open in New Window</a>
+<label>Replace Homepage Image</label>
+<input type="file" name="homepage_image" value="" class="input" />
+<small>JPEG 590x242</small>
+<input type="submit" class="input_button" value="Save" />
+</form>
+</div>
+<div class="label" onclick="expand_section(this);">
+  Personal Information
+</div>
+<div class="container closed">
+<form action="/user/jshmemory/change_personal_info" method="POST">
+<label>First Name <span class="required">*</span></label>
+<input type="text" name="firstname" value="xu" class="input" />
+<label>Surname <span class="required">*</span></label>
+<input type="text" name="surname" value="yanmei" class="input" />
+<label>Email Address <span class="required">*</span></label>
+<input type="text" name="email" value="zmplsf2587970@126.com" class="input" />
+<label>Personal By-line</label>
+<input type="text" name="buy_line" value="" class="input" />
+<small>Your personal catch phrase / signature</small>
+<label>Profile</label>
+<textarea rows="5" name="profile" id="profile"></textarea>
+        <small>
+        <p>You can use Textile to format your post. Common syntax includes:</p>
+        <ul>
+          <li>Use *asterisks* to make text bold</li>
+          <li>Use _underscores_ to emphasize</li>
+          <li>You can make links by writing them like this: "FlashDen":http://www.flashden.net</li>
+          <li>Wrap code in &lt;pre&gt;&lt;/pre&gt; tags to make it appear properly</li>
+        </ul>
+        <p>You can do much more, a <a href="http://hobix.com/textile/">full guide can be found here</a></p>
+        </small>
+<label>Location</label>
+<input type="text" name="lives_in" value="" class="input" />
+<small>i.e. Sydney, Australia</small>
+<input type="submit" class="input_button" value="Save" />
+</form>
+</div>
+</div>
+</div>
+        <div style="clear:both;"></div>
+        <!--[if IE 6]>
+<![endif]-->
+      </div>
+    </div>
+    <!-- END BODY -->

@@ -1,15 +1,15 @@
 <div id="header">
   <div id="top_menu">
     <% if is_logged_in?%>
-      <strong><a href="/user/111111" class="orange">welcome   <%=logged_in_user.username%></a></strong>
-      ( <a href="/deposit" class="white">US$0.00</a></strong> )
+      <strong><%= link_to logged_in_user.username,home_path, :class => 'orange' %> </strong>
+      ( <a href="/deposit" class="white">US$0.00</a> )
   </ul>
   <ul>
-    <%= link_to 'Account', home_path %>
-    <%= link_to 'Bookmarks', home_path %>
-    <%= link_to 'Author Program', home_path %>
-    <%= link_to 'Deposit', home_path %>
-    <%= link_to 'LogOut',logout_path %>
+    <li><%= link_to 'Account', user_path(logged_in_user) %></li>
+    <li><%= link_to 'Bookmarks', home_path %></li>
+    <li><%= link_to 'Author Program', home_path %></li>
+    <li><%= link_to 'Deposit', home_path %></li>
+    <li><%= link_to 'LogOut',logout_path %></li>
   </ul>
 <% else %>
   <ul>
